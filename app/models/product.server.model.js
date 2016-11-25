@@ -16,8 +16,7 @@ function validateLength(v) {
 var ProductSchema = new Schema({
 	category: {
 		type: Schema.Types.ObjectId,
-		ref: 'Category',
-		required: 'invalid category'
+		ref: 'Category'
 	},
 	created: {
 		type: Date,

@@ -3,7 +3,7 @@
 module.exports = {
 	db: 'mongodb://localhost/northwindnode-dev',
 	app: {
-		title: 'NorthwindNode - Development Environment'
+		title: 'MeanJSBeginner'
 	},
 	facebook: {
 		clientID: process.env.FACEBOOK_ID || 'APP_ID',

@@ -1,8 +1,8 @@
 'use strict';
 
-angular.module('categories').controller('CategoriesController', ['$scope', '$location', 'Categories',
+angular.module('categories').controller('CategoriesController', ['$scope', '$stateParams','$location', 'Categories',
 
-	function($scope, $location, Categories) {
+	function($scope, $stateParams, $location, Categories) {
 		//create a category
 		$scope.create = function() {
 			var category = new Categories({
@@ -20,6 +20,11 @@ angular.module('categories').controller('CategoriesController', ['$scope', '$loc
 		};
 		$scope.find = function() {
 			$scope.categories = Categories.query();
+		};
+		$scope.findOne = function() {
+			$scope.category = Categories.get({ 
+				categoryId: $stateParams.categoryId
+			});
 		};
 	}
 ]);
